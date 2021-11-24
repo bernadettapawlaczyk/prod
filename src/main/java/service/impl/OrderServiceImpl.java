@@ -2,12 +2,14 @@ package service.impl;
 
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
+import repository.OrderRepopsitory;
+import service.OrderService;
 
 import java.util.List;
 
 @Service
-public class OrderServiceImpl {
-    private OrderRepository orderRepository;
+public abstract class OrderServiceImpl extends OrderService {
+    private OrderRepopsitory orderRepository;
 
     @Override
     public void save(Order order) {

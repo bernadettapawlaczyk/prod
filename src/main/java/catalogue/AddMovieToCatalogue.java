@@ -1,5 +1,6 @@
 package catalogue;
 
+import exception.MovieArleadyExistsInCatalogueException;
 import lombok.RequiredArgsConstructor;
 import model.Movie;
 import org.springframework.stereotype.Component;

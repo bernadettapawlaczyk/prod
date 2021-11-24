@@ -7,23 +7,28 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CustomerService {
+public abstract class CustomerService {
 
-    void save (Customer customer);
-    Customer getById(Long id);
+    public abstract void save(Customer customer);
 
-    Optional<Customer> getByLastName(String lastName);
-    Optional<Customer> getByEmail(String email);
+    public abstract Customer getById(Long id);
 
-    List<Customer> getAll();
+    public abstract Optional<Customer> getByLastName(String lastName);
+    abstract Optional<Customer> getByEmail(String email);
 
-    void update (Customer customer);
+    public abstract List<Customer> getAll();
 
-    void delete (Customer customer);
+    public abstract void update(Customer customer);
 
-    Customer findByEmail(String  email);
-    Customer findByFirstName(String firstName);
-    Customer findByLastName (String lastName);
-    Customer findByAddress(String city, String street);
-    Customer findByPhoneNumber (String phoneNumber);
+    public abstract void delete(Customer customer);
+
+    public abstract Customer findByEmail(String email);
+
+    public abstract Customer findByFirstName(String firstName);
+
+    public abstract Customer findByLastName(String lastName);
+
+    public abstract Customer findByAddress(String city, String street);
+
+    public abstract Customer findByPhoneNumber(String phoneNumber);
 }

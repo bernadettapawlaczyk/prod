@@ -3,6 +3,6 @@ package service.impl;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CustomerTypeServiceImpl {
-    void saveById();
+public abstract class CustomerTypeServiceImpl {
+    abstract void saveById();
 }

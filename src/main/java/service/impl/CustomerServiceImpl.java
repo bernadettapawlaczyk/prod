@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CustomerServiceImpl implements CustomerService {
+public abstract class CustomerServiceImpl extends CustomerService {
     private CustomerRepository customerRepository;
 
     public CustomerServiceImpl(CustomerRepository customerRepository) {

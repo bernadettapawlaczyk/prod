@@ -3,12 +3,13 @@ package service.impl;
 import model.Movie;
 import org.springframework.stereotype.Service;
 import repository.MovieRepository;
+import service.MovieService;
 
 import java.util.LinkedList;
 import java.util.List;
 
 @Service
-public class MovieServiceImpl {
+public abstract class MovieServiceImpl extends MovieService {
     private MovieRepository movieRepository;
 
     public MovieServiceImpl(MovieRepository movieRepository) {

@@ -11,8 +11,9 @@ import java.util.Optional;
 
 @DataJpaTest
 public class OrderRepositoryTest {
+
     @Autowired
-    private OrderRepopsitory orderRepository;
+    private OrderRepopsitory orderRepopsitory;
 
     private static Long expectedId;
     private static Order order;

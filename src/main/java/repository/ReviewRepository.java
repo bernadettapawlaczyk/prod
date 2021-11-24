@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public class ReviewRepository extends CrudRepository<Review, Long> {
+public abstract class ReviewRepository implements CrudRepository<Review, Long> {
 
-    Optional<Review> findByMovie(Movie movie);
+    abstract Optional<Review> findByMovie(Movie movie);
 }

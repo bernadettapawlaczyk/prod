@@ -7,14 +7,14 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public class CustomerRepository extends JpaRepository<Customer, Long> {
-    Optional<Customer> findByLastName(String lastName);
+public abstract class CustomerRepository implements JpaRepository<Customer, Long> {
+    public abstract Optional<Customer> findByLastName(String lastName);
 
-    Optional<Customer> findByEmail(String email);
+    public abstract Optional<Customer> findByEmail(String email);
 
-    Optional<Customer> findByCity(String city);
+    abstract Optional<Customer> findByCity(String city);
 
-    Optional<Customer> findByStreet(String street);
+    abstract Optional<Customer> findByStreet(String street);
 
-    Optional<Customer> findByPhoneNumber(String phoneNumber);
+    abstract Optional<Customer> findByPhoneNumber(String phoneNumber);
 }

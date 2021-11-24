@@ -10,15 +10,16 @@ import java.time.LocalDate;
 import java.util.Optional;
 
 @Repository
-public class OrderRepopsitory extends CrudRepository<Order, Long> {
-    Optional<Order> findById(Long id);
+public abstract class OrderRepopsitory implements CrudRepository<Order, Long> {
 
-    Optional<Order> findByCustomer(Customer customer);
+    public abstract Optional<Order> findById(Long id);
 
-    Optional<Order> findByOrderStatus(OrderStatus orderStatus);
+    abstract Optional<Order> findByCustomer(Customer customer);
 
-    Optional<Order> findByDeliveryDate(LocalDate deliveryDate);
+    abstract Optional<Order> findByOrderStatus(OrderStatus orderStatus);
 
-    Optional<Order> findByReturnDate(LocalDate returnDate);
+    abstract Optional<Order> findByDeliveryDate(LocalDate deliveryDate);
+
+    abstract Optional<Order> findByReturnDate(LocalDate returnDate);
 }
-}
+

@@ -6,18 +6,21 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class MovieService {
-    void save(Movie movie);
-    Movie getById(Long id);
-    List<Movie> getAll();
+public abstract class MovieService {
+    public abstract void save(Movie movie);
 
-    void update(Movie movie);
+    public abstract Movie getById(Long id);
 
-    void delete (Long id);
+    public abstract List<Movie> getAll();
 
-    Movie findByTitle(String title);
-    Movie findByGenre(Genre genre);
-    Movie findByReleaseDate(String releaseDate);
+    public abstract void update(Movie movie);
+
+    public abstract void delete(Long id);
+
+    public abstract Movie findByTitle(String title);
+    public abstract Movie findByGenre(Genre genre);
+
+    public abstract Movie findByReleaseDate(String releaseDate);
 
     // Set<Movie> findAllByGenre(Genre genre);
 }

@@ -6,17 +6,22 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class OrderService {
-    void save (Order order);
-    Order getById(Long id);
-    List<Order> getAll();
+public abstract class OrderService {
+    public abstract void save(Order order);
 
-    void update(Order order);
+    public abstract Order getById(Long id);
 
-    void delete(Long id);
+    public abstract List<Order> getAll();
 
-    Order findByCustomer(String customer);
-    Order findByOrderStatus(String orderStatus);
-    Order findByDeliveryDate (String deliveryDate);
-    Order findByReturnDate(String returnDate);
+    public abstract void update(Order order);
+
+    public abstract void delete(Long id);
+
+    public abstract Order findByCustomer(String customer);
+
+    public abstract Order findByOrderStatus(String orderStatus);
+
+    public abstract Order findByDeliveryDate(String deliveryDate);
+
+    public abstract Order findByReturnDate(String returnDate);
 }

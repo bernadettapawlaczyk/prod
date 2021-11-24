@@ -6,6 +6,7 @@ import model.CustomerType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import service.CustomerService;
 
 import java.util.Arrays;
 import java.util.LinkedList;

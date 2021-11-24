@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import repository.MovieCopyRepository;
 import service.MovieCopyService;
 @Service
-public class MovieCopyServiceImpl implements MovieCopyService {
+public class MovieCopyServiceImpl extends MovieCopyService {
     private MovieCopyRepository movieCopyRepository;
 
     @Override
